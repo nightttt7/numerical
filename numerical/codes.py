@@ -105,11 +105,12 @@ class Bisection(BasicPointSolver):
 
 
 # %%
-solver = Bisection(lambda x: x**2-2*x-3, initial=[1, 10])
-solver
-print(solver)
-solver.n_iter
-solver.result
+if __name__ == "__main__":
+    solver = Bisection(lambda x: x**2-2*x-3, initial=[1, 10])
+    solver
+    print(solver)
+    solver.n_iter
+    solver.result
 
 
 # %%
@@ -154,11 +155,12 @@ class Newton(BasicPointSolver):
 
 
 # %%
-solver = Newton(lambda x: x**2-2*x-3, initial=[-5])
-solver
-print(solver)
-solver.result
-solver.n_iter
+if __name__ == "__main__":
+    solver = Newton(lambda x: x**2-2*x-3, initial=[-5])
+    solver
+    print(solver)
+    solver.result
+    solver.n_iter
 
 
 # %%
@@ -206,11 +208,12 @@ class Bracketing(BasicPointSolver):
 
 
 # %%
-solver = Bracketing(lambda x: x**2-2*x-3, initial=[-20, 5, 20])
-solver
-print(solver)
-solver.n_iter
-solver.result
+if __name__ == "__main__":
+    solver = Bracketing(lambda x: x**2-2*x-3, initial=[-20, 5, 20])
+    solver
+    print(solver)
+    solver.n_iter
+    solver.result
 
 
 # %%
@@ -261,6 +264,3 @@ class NewtonOptimize(Newton):
                 self.result = numpy.NaN
                 self.error_info = 'failed, sigma is to big.'
             return True
-
-
-# %%
